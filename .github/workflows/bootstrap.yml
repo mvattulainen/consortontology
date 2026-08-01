@@ -1,0 +1,67 @@
+name: Bootstrap Quartz repository
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  bootstrap:
+    if: github.event_name == 'workflow_dispatch' || github.event.head_commit.message == 'Upload Quartz source bundle'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Restore repository source
+        run: |
+          tar -xzf consortontology-bootstrap.tar.gz -C .
+          curl -fsSL https://raw.githubusercontent.com/jackyzha0/quartz/74b3fc9efd0caafea3dbcd846ddf1f06855b6d2a/quartz/util/emojimap.json -o quartz/util/emojimap.json
+          echo "4a401cda0af66ffc38f5747a0fc6ad578affbda5296e36390daac194d3b39c23  quartz/util/emojimap.json" | sha256sum -c -
+          rm consortontology-bootstrap.tar.gz
+          rm .github/workflows/bootstrap.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit -m "Publish CONSORT ontology with Quartz"
+          git push
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Quartz plugin bridge
+        run: npm run install-plugins
+
+      - name: Build Quartz site
+        run: npx quartz build
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
