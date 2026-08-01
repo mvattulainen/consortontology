@@ -30,7 +30,6 @@ jobs:
           curl -fsSL https://raw.githubusercontent.com/jackyzha0/quartz/74b3fc9efd0caafea3dbcd846ddf1f06855b6d2a/quartz/util/emojimap.json -o quartz/util/emojimap.json
           echo "4a401cda0af66ffc38f5747a0fc6ad578affbda5296e36390daac194d3b39c23  quartz/util/emojimap.json" | sha256sum -c -
           rm consortontology-bootstrap.tar.gz
-          rm .github/workflows/bootstrap.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add --all
