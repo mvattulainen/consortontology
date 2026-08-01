@@ -1,4 +1,5 @@
 {
+  "item_rules_source": "_data/items.yaml",
   "rules": [
     {
       "expression": {
@@ -16,6 +17,246 @@
       "natural_language": "A checklist item is complete when every applicable must or conditional_must requirement is satisfied, subject to requirement-group operators.",
       "rule_kind": "completeness",
       "status": "reviewed",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.randomised_trial",
+          "then": {
+            "all": [
+              { "exactly_one": { "ref": "has_trial_design" } },
+              { "at_least": { "count": 2, "ref": "has_arm" } }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-trial-structure",
+      "label": "TDM-01 Trial structure",
+      "natural_language": "Every RandomisedTrial has exactly one TrialDesign and at least two TrialArms.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.trial_arm",
+          "then": {
+            "all": [
+              { "exactly_one": { "ref": "TrialArm.arm_identifier" } },
+              { "exactly_one": { "ref": "TrialArm.label" } }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-arm-identification",
+      "label": "TDM-02 Arm identification",
+      "natural_language": "Every TrialArm has one arm_identifier and one human-readable label.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.enrolled_participant",
+          "then": {
+            "exactly_one": {
+              "ref": "assigned_to_arm",
+              "where": { "equals": { "ref": "arm_of_trial", "value": "current_trial" } }
+            }
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-participant-assignment",
+      "label": "TDM-03 Participant assignment",
+      "natural_language": "Every enrolled Participant is assigned to exactly one TrialArm belonging to the same trial.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.trial_arm",
+          "then": {
+            "all": [
+              { "at_least": { "count": 1, "ref": "has_intervention" } },
+              {
+                "for_each": {
+                  "domain": "has_intervention",
+                  "then": { "require": { "ref": "Intervention.name" } }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-arm-intervention",
+      "label": "TDM-04 Arm intervention",
+      "natural_language": "Every TrialArm has at least one Intervention, and every Intervention has a name.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.outcome_specification",
+          "then": {
+            "all": [
+              { "require": { "ref": "OutcomeSpecification.outcome_identifier" } },
+              { "require": { "ref": "OutcomeSpecification.measurement_variable" } },
+              { "require": { "ref": "OutcomeSpecification.role" } },
+              { "require": { "ref": "OutcomeSpecification.analysis_metric" } },
+              { "require": { "ref": "OutcomeSpecification.aggregation_method" } },
+              { "require": { "ref": "OutcomeSpecification.time_point" } }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-outcome-definition",
+      "label": "TDM-05 Outcome definition",
+      "natural_language": "Every OutcomeSpecification has an identifier, measurement variable, role, analysis metric, aggregation method, and time point.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.randomised_trial",
+          "then": {
+            "all": [
+              { "at_least": { "count": 1, "ref": "has_primary_outcome" } },
+              {
+                "for_each": {
+                  "domain": "has_primary_outcome",
+                  "then": { "in": { "ref": "specifies_outcome" } }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-primary-outcome",
+      "label": "TDM-06 Primary outcome designation",
+      "natural_language": "Every RandomisedTrial has at least one PrimaryOutcome, and each PrimaryOutcome is one of the trial's OutcomeSpecifications.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.randomised_trial",
+          "then": {
+            "all": [
+              { "exactly_one": { "ref": "uses_random_allocation_process" } },
+              { "exactly_one": { "ref": "uses_allocation_concealment_process" } },
+              {
+                "for_each": {
+                  "domain": "uses_random_allocation_process",
+                  "then": {
+                    "require": { "ref": "RandomAllocationProcess.sequence_generation_method" }
+                  }
+                }
+              },
+              {
+                "for_each": {
+                  "domain": "uses_allocation_concealment_process",
+                  "then": {
+                    "require": { "ref": "AllocationConcealmentProcess.concealment_mechanism" }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-randomisation-processes",
+      "label": "TDM-07 Randomisation processes",
+      "natural_language": "Every RandomisedTrial has exactly one RandomAllocationProcess and exactly one AllocationConcealmentProcess, each with its required method description.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.outcome_result",
+          "then": {
+            "all": [
+              { "exactly_one": { "ref": "result_for_outcome" } },
+              { "at_least": { "count": 1, "ref": "has_group_result" } },
+              {
+                "for_each": {
+                  "domain": "has_group_result",
+                  "then": {
+                    "exactly_one": {
+                      "ref": "result_for_arm",
+                      "where": {
+                        "equals": { "ref": "arm_of_trial", "value": "current_trial" }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-result-linkage",
+      "label": "TDM-08 Result linkage",
+      "natural_language": "Every OutcomeResult refers to exactly one OutcomeSpecification and has at least one GroupResult; every GroupResult refers to exactly one TrialArm of the same trial.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.effect_estimate",
+          "then": {
+            "all": [
+              { "require": { "ref": "EffectEstimate.measure_type" } },
+              { "require": { "ref": "EffectEstimate.value" } },
+              {
+                "for_each": {
+                  "domain": "has_precision_estimate",
+                  "then": { "require": { "ref": "PrecisionEstimate.interval_type" } }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-effect-precision",
+      "label": "TDM-09 Effect and precision",
+      "natural_language": "Every EffectEstimate has a measure type and numeric value; every attached PrecisionEstimate states its interval type.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
+      "type": "NormativeRule"
+    },
+    {
+      "expression": {
+        "for_each": {
+          "domain": "trial.participant_flow_observation",
+          "then": {
+            "all": [
+              { "require": { "ref": "ParticipantFlowObservation.stage" } },
+              { "require": { "ref": "ParticipantFlowObservation.count" } },
+              { "at_least": { "ref": "ParticipantFlowObservation.count", "value": 0 } }
+            ]
+          }
+        }
+      },
+      "id": "consort-2025-rule-trial-domain-participant-flow",
+      "label": "TDM-10 Participant-flow observation",
+      "natural_language": "Every ParticipantFlowObservation has a stage and a non-negative count.",
+      "rule_kind": "domain_integrity",
+      "status": "draft",
       "type": "NormativeRule"
     }
   ],
