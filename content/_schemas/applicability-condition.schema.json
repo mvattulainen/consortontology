@@ -1,0 +1,70 @@
+{
+  "$id": "https://example.org/consort/schemas/applicability-condition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "condition_kind": {
+      "enum": [
+        "objective",
+        "type_dependent",
+        "presence_dependent",
+        "contextual",
+        "alternative"
+      ]
+    },
+    "expression": {
+      "minProperties": 1,
+      "type": "object"
+    },
+    "id": {
+      "pattern": "^consort-2025-condition-",
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "source_references": {
+      "items": {
+        "properties": {
+          "locator": {
+            "minProperties": 1,
+            "type": "object"
+          },
+          "source": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "locator"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "approved",
+        "deprecated"
+      ]
+    },
+    "type": {
+      "const": "ApplicabilityCondition"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "label",
+    "status",
+    "condition_kind",
+    "expression",
+    "source_references"
+  ],
+  "title": "Applicability condition",
+  "type": "object"
+}

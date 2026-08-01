@@ -1,0 +1,334 @@
+{
+  "relations": [
+    {
+      "definition": "Guideline has a released version",
+      "domain": "ReportingGuideline",
+      "inverse": "version_of",
+      "name": "has_version",
+      "range": "GuidelineVersion"
+    },
+    {
+      "definition": "Inverse of has_version",
+      "domain": "GuidelineVersion",
+      "inverse": "has_version",
+      "name": "version_of",
+      "range": "ReportingGuideline"
+    },
+    {
+      "definition": "Version contains a top-level section",
+      "domain": "GuidelineVersion",
+      "inverse": "section_of",
+      "name": "has_section",
+      "range": "ChecklistSection"
+    },
+    {
+      "definition": "Inverse of has_section",
+      "domain": "ChecklistSection",
+      "inverse": "has_section",
+      "name": "section_of",
+      "range": "GuidelineVersion"
+    },
+    {
+      "definition": "Section contains a topic",
+      "domain": "ChecklistSection",
+      "inverse": "topic_of",
+      "name": "has_topic",
+      "range": "ChecklistTopic"
+    },
+    {
+      "definition": "Inverse of has_topic",
+      "domain": "ChecklistTopic",
+      "inverse": "has_topic",
+      "name": "topic_of",
+      "range": "ChecklistSection"
+    },
+    {
+      "definition": "Organizational containment",
+      "domain": "ChecklistSection|ChecklistTopic",
+      "inverse": "item_of",
+      "name": "contains_item",
+      "range": "ChecklistItem"
+    },
+    {
+      "definition": "Inverse containment",
+      "domain": "ChecklistItem",
+      "inverse": "contains_item",
+      "name": "item_of",
+      "range": "ChecklistSection|ChecklistTopic"
+    },
+    {
+      "definition": "Item decomposes into a requirement",
+      "domain": "ChecklistItem",
+      "inverse": "requirement_of",
+      "name": "has_atomic_requirement",
+      "range": "AtomicRequirement"
+    },
+    {
+      "definition": "Inverse decomposition",
+      "domain": "AtomicRequirement",
+      "inverse": "has_atomic_requirement",
+      "name": "requirement_of",
+      "range": "ChecklistItem"
+    },
+    {
+      "definition": "Item contains a logical group",
+      "domain": "ChecklistItem",
+      "inverse": null,
+      "name": "has_requirement_group",
+      "range": "RequirementGroup"
+    },
+    {
+      "definition": "Group membership",
+      "domain": "RequirementGroup",
+      "inverse": null,
+      "name": "has_member",
+      "range": "AtomicRequirement|RequirementGroup"
+    },
+    {
+      "definition": "Entity is active under a condition",
+      "domain": "ChecklistItem|RequirementGroup|AtomicRequirement",
+      "inverse": null,
+      "name": "has_applicability_condition",
+      "range": "ApplicabilityCondition"
+    },
+    {
+      "definition": "Requirement repeats over a domain",
+      "domain": "AtomicRequirement|RequirementGroup",
+      "inverse": null,
+      "name": "has_scope",
+      "range": "ScopeDefinition"
+    },
+    {
+      "definition": "Rule applies to entity",
+      "domain": "ChecklistItem|AtomicRequirement",
+      "inverse": null,
+      "name": "governed_by",
+      "range": "NormativeRule"
+    },
+    {
+      "definition": "Rule operand refers to requirement",
+      "domain": "NormativeRule",
+      "inverse": null,
+      "name": "references_requirement",
+      "range": "AtomicRequirement"
+    },
+    {
+      "definition": "Informative or semantic cross-reference",
+      "domain": "OntologyEntity",
+      "inverse": null,
+      "name": "cross_references",
+      "range": "OntologyEntity"
+    },
+    {
+      "definition": "Ordering relation",
+      "domain": "ChecklistItem",
+      "inverse": null,
+      "name": "precedes",
+      "range": "ChecklistItem"
+    },
+    {
+      "definition": "Entity was formalized from source",
+      "domain": "OntologyEntity",
+      "inverse": null,
+      "name": "derived_from",
+      "range": "SourceReference"
+    },
+    {
+      "definition": "Precise source location",
+      "domain": "OntologyEntity",
+      "inverse": null,
+      "name": "has_source_locator",
+      "range": "SourceLocator"
+    },
+    {
+      "definition": "New entity replaces older entity",
+      "domain": "OntologyEntity",
+      "inverse": null,
+      "name": "supersedes",
+      "range": "OntologyEntity"
+    },
+    {
+      "definition": "Adds specificity without replacing identity",
+      "domain": "ExtensionHook|OntologyEntity",
+      "inverse": null,
+      "name": "refines",
+      "range": "OntologyEntity"
+    },
+    {
+      "definition": "Changes applicability or requirements",
+      "domain": "ExtensionHook",
+      "inverse": null,
+      "name": "modifies",
+      "range": "OntologyEntity"
+    },
+    {
+      "definition": "Class inherits the meaning and constraints of a parent class",
+      "domain": "OntologyClass",
+      "inverse": null,
+      "name": "subclass_of",
+      "range": "OntologyClass"
+    },
+    {
+      "definition": "Guideline element specifies reporting about a domain class",
+      "domain": "ChecklistItem|AtomicRequirement",
+      "inverse": null,
+      "name": "targets_domain_class",
+      "range": "OntologyClass"
+    },
+    {
+      "definition": "Trial has a structural design",
+      "domain": "RandomisedTrial",
+      "inverse": "design_of_trial",
+      "name": "has_trial_design",
+      "range": "TrialDesign"
+    },
+    {
+      "definition": "Trial contains a trial arm",
+      "domain": "RandomisedTrial",
+      "inverse": "arm_of_trial",
+      "name": "has_arm",
+      "range": "TrialArm"
+    },
+    {
+      "definition": "Trial enrols a participant",
+      "domain": "RandomisedTrial",
+      "inverse": "participates_in_trial",
+      "name": "enrols_participant",
+      "range": "Participant"
+    },
+    {
+      "definition": "Participant is assigned to a trial arm",
+      "domain": "Participant",
+      "inverse": "has_assigned_participant",
+      "name": "assigned_to_arm",
+      "range": "TrialArm"
+    },
+    {
+      "definition": "Trial arm specifies or receives an intervention",
+      "domain": "TrialArm",
+      "inverse": "intervention_of_arm",
+      "name": "has_intervention",
+      "range": "Intervention"
+    },
+    {
+      "definition": "Trial identifies a comparator condition",
+      "domain": "RandomisedTrial",
+      "inverse": "comparator_of_trial",
+      "name": "has_comparator",
+      "range": "Comparator"
+    },
+    {
+      "definition": "Trial prespecifies an outcome",
+      "domain": "RandomisedTrial",
+      "inverse": "outcome_of_trial",
+      "name": "specifies_outcome",
+      "range": "OutcomeSpecification"
+    },
+    {
+      "definition": "Trial designates a primary outcome",
+      "domain": "RandomisedTrial",
+      "inverse": "primary_outcome_of_trial",
+      "name": "has_primary_outcome",
+      "range": "PrimaryOutcome"
+    },
+    {
+      "definition": "Trial designates a secondary outcome",
+      "domain": "RandomisedTrial",
+      "inverse": "secondary_outcome_of_trial",
+      "name": "has_secondary_outcome",
+      "range": "SecondaryOutcome"
+    },
+    {
+      "definition": "Trial specifies a harms outcome",
+      "domain": "RandomisedTrial",
+      "inverse": "harms_outcome_of_trial",
+      "name": "has_harms_outcome",
+      "range": "HarmsOutcome"
+    },
+    {
+      "definition": "Trial uses a random allocation process",
+      "domain": "RandomisedTrial",
+      "inverse": "random_allocation_process_of",
+      "name": "uses_random_allocation_process",
+      "range": "RandomAllocationProcess"
+    },
+    {
+      "definition": "Trial uses an allocation concealment process",
+      "domain": "RandomisedTrial",
+      "inverse": "allocation_concealment_process_of",
+      "name": "uses_allocation_concealment_process",
+      "range": "AllocationConcealmentProcess"
+    },
+    {
+      "definition": "Trial uses or evaluates a blinding process",
+      "domain": "RandomisedTrial",
+      "inverse": "blinding_process_of",
+      "name": "uses_blinding_process",
+      "range": "BlindingProcess"
+    },
+    {
+      "definition": "Trial defines a responsibility performed by an actor",
+      "domain": "RandomisedTrial",
+      "inverse": "role_in_trial",
+      "name": "has_trial_role",
+      "range": "TrialRole"
+    },
+    {
+      "definition": "Trial has an observation at a participant-flow stage",
+      "domain": "RandomisedTrial",
+      "inverse": "flow_observation_of_trial",
+      "name": "has_flow_observation",
+      "range": "ParticipantFlowObservation"
+    },
+    {
+      "definition": "Trial reports a result for an outcome",
+      "domain": "RandomisedTrial",
+      "inverse": "outcome_result_of_trial",
+      "name": "has_outcome_result",
+      "range": "OutcomeResult"
+    },
+    {
+      "definition": "Outcome result instantiates an outcome specification",
+      "domain": "OutcomeResult",
+      "inverse": "has_result",
+      "name": "result_for_outcome",
+      "range": "OutcomeSpecification"
+    },
+    {
+      "definition": "Outcome result contains a result for a trial arm",
+      "domain": "OutcomeResult",
+      "inverse": "group_result_of",
+      "name": "has_group_result",
+      "range": "GroupResult"
+    },
+    {
+      "definition": "Group result describes one trial arm",
+      "domain": "GroupResult",
+      "inverse": "has_group_result_for_arm",
+      "name": "result_for_arm",
+      "range": "TrialArm"
+    },
+    {
+      "definition": "Outcome result includes an effect estimate",
+      "domain": "OutcomeResult",
+      "inverse": "effect_estimate_of",
+      "name": "has_effect_estimate",
+      "range": "EffectEstimate"
+    },
+    {
+      "definition": "Effect estimate includes a precision estimate",
+      "domain": "EffectEstimate",
+      "inverse": "precision_estimate_of",
+      "name": "has_precision_estimate",
+      "range": "PrecisionEstimate"
+    },
+    {
+      "definition": "Process is performed or governed by a trial role",
+      "domain": "RandomAllocationProcess|AllocationConcealmentProcess|BlindingProcess",
+      "inverse": "performs_process_role",
+      "name": "performed_by_role",
+      "range": "TrialRole"
+    }
+  ],
+  "schema_version": "1.0"
+}

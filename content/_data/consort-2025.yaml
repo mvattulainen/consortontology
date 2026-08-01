@@ -1,0 +1,359 @@
+{
+  "extension_hook_example": {
+    "id": "consort-2025-extension-hook-example",
+    "label": "Example extension hook",
+    "refines": "consort-2025",
+    "status": "draft",
+    "type": "ExtensionHook"
+  },
+  "guideline": {
+    "has_version": [
+      "consort-2025"
+    ],
+    "id": "consort",
+    "label": "CONSORT",
+    "status": "reviewed",
+    "type": "ReportingGuideline"
+  },
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "file_name": "Title and Abstract",
+      "guideline_version": "consort-2025",
+      "id": "consort-2025-section-title-and-abstract",
+      "label": "Title and abstract",
+      "order": 1,
+      "status": "reviewed",
+      "type": "ChecklistSection"
+    },
+    {
+      "file_name": "Open Science",
+      "guideline_version": "consort-2025",
+      "id": "consort-2025-section-open-science",
+      "label": "Open science",
+      "order": 2,
+      "status": "reviewed",
+      "type": "ChecklistSection"
+    },
+    {
+      "file_name": "Introduction",
+      "guideline_version": "consort-2025",
+      "id": "consort-2025-section-introduction",
+      "label": "Introduction",
+      "order": 3,
+      "status": "reviewed",
+      "type": "ChecklistSection"
+    },
+    {
+      "file_name": "Methods",
+      "guideline_version": "consort-2025",
+      "id": "consort-2025-section-methods",
+      "label": "Methods",
+      "order": 4,
+      "status": "reviewed",
+      "type": "ChecklistSection"
+    },
+    {
+      "file_name": "Results",
+      "guideline_version": "consort-2025",
+      "id": "consort-2025-section-results",
+      "label": "Results",
+      "order": 5,
+      "status": "reviewed",
+      "type": "ChecklistSection"
+    },
+    {
+      "file_name": "Discussion",
+      "guideline_version": "consort-2025",
+      "id": "consort-2025-section-discussion",
+      "label": "Discussion",
+      "order": 6,
+      "status": "reviewed",
+      "type": "ChecklistSection"
+    }
+  ],
+  "topics": [
+    {
+      "file_name": "Title and structured abstract",
+      "id": "consort-2025-topic-title-and-structured-abstract",
+      "label": "Title and structured abstract",
+      "order": 1,
+      "section": "consort-2025-section-title-and-abstract",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Trial registration",
+      "id": "consort-2025-topic-trial-registration",
+      "label": "Trial registration",
+      "order": 2,
+      "section": "consort-2025-section-open-science",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Protocol and statistical analysis plan",
+      "id": "consort-2025-topic-protocol-and-statistical-analysis-plan",
+      "label": "Protocol and statistical analysis plan",
+      "order": 3,
+      "section": "consort-2025-section-open-science",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Data sharing",
+      "id": "consort-2025-topic-data-sharing",
+      "label": "Data sharing",
+      "order": 4,
+      "section": "consort-2025-section-open-science",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Funding and conflicts of interest",
+      "id": "consort-2025-topic-funding-and-conflicts-of-interest",
+      "label": "Funding and conflicts of interest",
+      "order": 5,
+      "section": "consort-2025-section-open-science",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Background and rationale",
+      "id": "consort-2025-topic-background-and-rationale",
+      "label": "Background and rationale",
+      "order": 6,
+      "section": "consort-2025-section-introduction",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Objectives",
+      "id": "consort-2025-topic-objectives",
+      "label": "Objectives",
+      "order": 7,
+      "section": "consort-2025-section-introduction",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Patient and public involvement",
+      "id": "consort-2025-topic-patient-and-public-involvement",
+      "label": "Patient and public involvement",
+      "order": 8,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Trial design",
+      "id": "consort-2025-topic-trial-design",
+      "label": "Trial design",
+      "order": 9,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Changes to trial protocol",
+      "id": "consort-2025-topic-changes-to-trial-protocol",
+      "label": "Changes to trial protocol",
+      "order": 10,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Trial setting",
+      "id": "consort-2025-topic-trial-setting",
+      "label": "Trial setting",
+      "order": 11,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Eligibility criteria",
+      "id": "consort-2025-topic-eligibility-criteria",
+      "label": "Eligibility criteria",
+      "order": 12,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Intervention and comparator",
+      "id": "consort-2025-topic-intervention-and-comparator",
+      "label": "Intervention and comparator",
+      "order": 13,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Outcomes",
+      "id": "consort-2025-topic-outcomes",
+      "label": "Outcomes",
+      "order": 14,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Harms",
+      "id": "consort-2025-topic-harms",
+      "label": "Harms",
+      "order": 15,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Sample size",
+      "id": "consort-2025-topic-sample-size",
+      "label": "Sample size",
+      "order": 16,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Randomisation - sequence generation",
+      "id": "consort-2025-topic-randomisation-sequence-generation",
+      "label": "Randomisation: sequence generation",
+      "order": 17,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Allocation concealment mechanism",
+      "id": "consort-2025-topic-allocation-concealment-mechanism",
+      "label": "Allocation concealment mechanism",
+      "order": 18,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Implementation",
+      "id": "consort-2025-topic-implementation",
+      "label": "Implementation",
+      "order": 19,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Blinding",
+      "id": "consort-2025-topic-blinding",
+      "label": "Blinding",
+      "order": 20,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Statistical methods",
+      "id": "consort-2025-topic-statistical-methods",
+      "label": "Statistical methods",
+      "order": 21,
+      "section": "consort-2025-section-methods",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Participant flow",
+      "id": "consort-2025-topic-participant-flow",
+      "label": "Participant flow",
+      "order": 22,
+      "section": "consort-2025-section-results",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Recruitment",
+      "id": "consort-2025-topic-recruitment",
+      "label": "Recruitment",
+      "order": 23,
+      "section": "consort-2025-section-results",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Intervention and comparator delivery",
+      "id": "consort-2025-topic-intervention-and-comparator-delivery",
+      "label": "Intervention and comparator delivery",
+      "order": 24,
+      "section": "consort-2025-section-results",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Baseline data",
+      "id": "consort-2025-topic-baseline-data",
+      "label": "Baseline data",
+      "order": 25,
+      "section": "consort-2025-section-results",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Numbers analysed, outcomes and estimation",
+      "id": "consort-2025-topic-numbers-analysed-outcomes-and-estimation",
+      "label": "Numbers analysed, outcomes and estimation",
+      "order": 26,
+      "section": "consort-2025-section-results",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Ancillary analyses",
+      "id": "consort-2025-topic-ancillary-analyses",
+      "label": "Ancillary analyses",
+      "order": 27,
+      "section": "consort-2025-section-results",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Interpretation",
+      "id": "consort-2025-topic-interpretation",
+      "label": "Interpretation",
+      "order": 28,
+      "section": "consort-2025-section-discussion",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    },
+    {
+      "file_name": "Limitations",
+      "id": "consort-2025-topic-limitations",
+      "label": "Limitations",
+      "order": 29,
+      "section": "consort-2025-section-discussion",
+      "status": "reviewed",
+      "type": "ChecklistTopic"
+    }
+  ],
+  "version": {
+    "guideline": "consort",
+    "has_section": [
+      "consort-2025-section-title-and-abstract",
+      "consort-2025-section-open-science",
+      "consort-2025-section-introduction",
+      "consort-2025-section-methods",
+      "consort-2025-section-results",
+      "consort-2025-section-discussion"
+    ],
+    "id": "consort-2025",
+    "label": "CONSORT 2025",
+    "publication_year": 2025,
+    "source_references": [
+      "consort-2025-statement",
+      "consort-2025-expanded-checklist"
+    ],
+    "status": "reviewed",
+    "type": "GuidelineVersion",
+    "version_label": "2025"
+  }
+}

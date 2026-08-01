@@ -1,0 +1,23 @@
+{
+  "rules": [
+    {
+      "expression": {
+        "for_each": {
+          "domain": "reporting_context.checklist_item",
+          "then": {
+            "satisfy_with": {
+              "value": "all_applicable_must_and_conditional_must_requirements_subject_to_groups"
+            }
+          }
+        }
+      },
+      "id": "consort-2025-rule-general-item-completeness",
+      "label": "General item completeness",
+      "natural_language": "A checklist item is complete when every applicable must or conditional_must requirement is satisfied, subject to requirement-group operators.",
+      "rule_kind": "completeness",
+      "status": "reviewed",
+      "type": "NormativeRule"
+    }
+  ],
+  "schema_version": "1.0"
+}

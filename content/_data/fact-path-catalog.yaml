@@ -1,0 +1,268 @@
+{
+  "fact_paths": [
+    {
+      "path": "design.estimands_framework.used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "design.sites.have_eligibility_criteria",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.deliverers.have_eligibility_criteria",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "reporting_context.relevant_systematic_review.available",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.additional_materials.relevant",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.concomitant_care.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.modification_criteria.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.comparator.type",
+      "status": "reviewed",
+      "value_type": "controlled_term"
+    },
+    {
+      "path": "intervention.fidelity_assessment.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.fidelity_improvement_strategy.used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.treated_as_planned_classification.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "harm.systematic_assessment.used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "harm.metrics.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "harm.nonsystematic_assessment.used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "harm.grouping.used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "analysis.sample_size.adjustment_used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "analysis.sample_size.software_used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "analysis.interim_analysis.conducted",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "design.randomisation.software_used",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "design.randomisation.blocked",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "design.randomisation.stratified",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "design.randomisation.minimisation",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "design.allocation.roles_overlap",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "trial.blinding.any_role_blinded",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "trial.blinding.maintenance_procedures.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "trial.blinding.evaluation_performed",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "trial.blinding.compromised",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "trial.blinding.emergency_unblinding_performed",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "analysis.method.bayesian",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "analysis.adjusted.performed",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "analysis.multiplicity.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "analysis.additional.performed",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "trial.flow.potential_enrolment_recorded",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "reporting_context.provider_centre_flow.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "outcome.type",
+      "status": "reviewed",
+      "value_type": "controlled_term"
+    },
+    {
+      "path": "trial.stopped_early",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.delivery_fidelity.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "intervention.concomitant_exposure_summary.relevant",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "reporting_context.baseline.continuous_variable_present",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "reporting_context.baseline.categorical_variable_present",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "harm.event_count.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "harm.effect_estimate.applicable",
+      "status": "reviewed",
+      "value_type": "boolean"
+    },
+    {
+      "path": "harm.outcome.type",
+      "status": "reviewed",
+      "value_type": "controlled_term"
+    }
+  ],
+  "namespaces": [
+    "trial",
+    "design",
+    "outcome",
+    "analysis",
+    "intervention",
+    "harm",
+    "registration",
+    "reporting_context"
+  ],
+  "schema_version": "1.0",
+  "scope_domains": [
+    {
+      "domain": "intervention.trial_group_intervention",
+      "status": "reviewed"
+    },
+    {
+      "domain": "outcome.primary_or_secondary",
+      "status": "reviewed"
+    },
+    {
+      "domain": "outcome.planned_primary_or_secondary",
+      "status": "reviewed"
+    },
+    {
+      "domain": "harm.systematically_assessed",
+      "status": "reviewed"
+    },
+    {
+      "domain": "harm.non_systematically_assessed",
+      "status": "reviewed"
+    },
+    {
+      "domain": "analysis.declared",
+      "status": "reviewed"
+    },
+    {
+      "domain": "analysis.additional",
+      "status": "reviewed"
+    },
+    {
+      "domain": "trial.group",
+      "status": "reviewed"
+    },
+    {
+      "domain": "reporting_context.checklist_item",
+      "status": "reviewed"
+    }
+  ]
+}

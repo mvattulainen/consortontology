@@ -1,0 +1,657 @@
+{
+  "classes": [
+    {
+      "abstract": true,
+      "definition": "Abstract superclass for every machine-readable entity.",
+      "id": "consort-class-ontology-entity",
+      "kind": "meta_class",
+      "label": "Ontology Entity",
+      "name": "OntologyEntity",
+      "parent": null,
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A first-class definition of a category of ontology entity.",
+      "id": "consort-class-ontology-class",
+      "kind": "meta_class",
+      "label": "Ontology Class",
+      "name": "OntologyClass",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A maintained reporting standard with one or more released versions.",
+      "id": "consort-class-reporting-guideline",
+      "kind": "meta_class",
+      "label": "Reporting Guideline",
+      "name": "ReportingGuideline",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A released version of a reporting guideline.",
+      "id": "consort-class-guideline-version",
+      "kind": "meta_class",
+      "label": "Guideline Version",
+      "name": "GuidelineVersion",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A top-level organizational section of a guideline version.",
+      "id": "consort-class-checklist-section",
+      "kind": "meta_class",
+      "label": "Checklist Section",
+      "name": "ChecklistSection",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A named topic grouping checklist items within a section.",
+      "id": "consort-class-checklist-topic",
+      "kind": "meta_class",
+      "label": "Checklist Topic",
+      "name": "ChecklistTopic",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "An independently addressable checklist entry, including lettered subitems.",
+      "id": "consort-class-checklist-item",
+      "kind": "meta_class",
+      "label": "Checklist Item",
+      "name": "ChecklistItem",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "The smallest independently evaluable reporting requirement.",
+      "id": "consort-class-atomic-requirement",
+      "kind": "meta_class",
+      "label": "Atomic Requirement",
+      "name": "AtomicRequirement",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A logical grouping of atomic requirements or other groups.",
+      "id": "consort-class-requirement-group",
+      "kind": "meta_class",
+      "label": "Requirement Group",
+      "name": "RequirementGroup",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A formal condition determining whether an entity is active.",
+      "id": "consort-class-applicability-condition",
+      "kind": "meta_class",
+      "label": "Applicability Condition",
+      "name": "ApplicabilityCondition",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A definition of the entities over which a requirement repeats.",
+      "id": "consort-class-scope-definition",
+      "kind": "meta_class",
+      "label": "Scope Definition",
+      "name": "ScopeDefinition",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A declarative rule for applicability, composition, scope, or completeness.",
+      "id": "consort-class-normative-rule",
+      "kind": "meta_class",
+      "label": "Normative Rule",
+      "name": "NormativeRule",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A managed vocabulary value.",
+      "id": "consort-class-controlled-term",
+      "kind": "meta_class",
+      "label": "Controlled Term",
+      "name": "ControlledTerm",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A bibliographic or web source supporting an ontology entity.",
+      "id": "consort-class-source-reference",
+      "kind": "meta_class",
+      "label": "Source Reference",
+      "name": "SourceReference",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A precise location within a source.",
+      "id": "consort-class-source-locator",
+      "kind": "meta_class",
+      "label": "Source Locator",
+      "name": "SourceLocator",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A placeholder through which a CONSORT extension may refine or modify an element.",
+      "id": "consort-class-extension-hook",
+      "kind": "meta_class",
+      "label": "Extension Hook",
+      "name": "ExtensionHook",
+      "parent": "OntologyEntity",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A study in which participants or other units are assigned to trial arms using a random allocation process.",
+      "id": "consort-class-randomised-trial",
+      "kind": "domain_class",
+      "label": "Randomised Trial",
+      "name": "RandomisedTrial",
+      "parent": "OntologyEntity",
+      "properties": {
+        "public_title": {
+          "definition": "Public title of the trial.",
+          "required": false,
+          "value_type": "string"
+        },
+        "trial_identifier": {
+          "definition": "Stable identifier for the trial.",
+          "required": false,
+          "value_type": "identifier"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "The structural design of a randomised trial, including design type, framework, unit of randomisation, and allocation ratio.",
+      "id": "consort-class-trial-design",
+      "kind": "domain_class",
+      "label": "Trial Design",
+      "name": "TrialDesign",
+      "parent": "OntologyEntity",
+      "properties": {
+        "allocation_ratio": {
+          "definition": "Planned ratio of allocation across trial arms.",
+          "required": false,
+          "value_type": "string"
+        },
+        "design_type": {
+          "definition": "Structural design such as parallel-group, crossover, or cluster.",
+          "required": false,
+          "value_type": "controlled_term"
+        },
+        "framework": {
+          "definition": "Inferential framework such as superiority, equivalence, or non-inferiority.",
+          "required": false,
+          "value_type": "controlled_term"
+        },
+        "unit_of_randomisation": {
+          "definition": "Type of unit assigned by randomisation.",
+          "required": false,
+          "value_type": "controlled_term"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A named group to which participants or other units can be assigned and for which an intervention or comparator is specified.",
+      "id": "consort-class-trial-arm",
+      "kind": "domain_class",
+      "label": "Trial Arm",
+      "name": "TrialArm",
+      "parent": "OntologyEntity",
+      "properties": {
+        "arm_identifier": {
+          "definition": "Stable identifier for the trial arm.",
+          "required": true,
+          "value_type": "identifier"
+        },
+        "label": {
+          "definition": "Human-readable arm label.",
+          "required": true,
+          "value_type": "string"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A person or other eligible unit enrolled in a randomised trial.",
+      "id": "consort-class-participant",
+      "kind": "domain_class",
+      "label": "Participant",
+      "name": "Participant",
+      "parent": "OntologyEntity",
+      "properties": {
+        "participant_identifier": {
+          "definition": "Pseudonymous or external participant identifier.",
+          "required": false,
+          "value_type": "identifier"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A treatment, exposure, strategy, or care process assigned or delivered within a trial arm.",
+      "id": "consort-class-intervention",
+      "kind": "domain_class",
+      "label": "Intervention",
+      "name": "Intervention",
+      "parent": "OntologyEntity",
+      "properties": {
+        "description": {
+          "definition": "Replicable description of intervention components and delivery.",
+          "required": false,
+          "value_type": "string"
+        },
+        "name": {
+          "definition": "Name of the intervention.",
+          "required": true,
+          "value_type": "string"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "The intervention, usual care, placebo, or other condition against which another intervention is evaluated.",
+      "id": "consort-class-comparator",
+      "kind": "domain_class",
+      "label": "Comparator",
+      "name": "Comparator",
+      "parent": "OntologyEntity",
+      "properties": {
+        "comparator_type": {
+          "definition": "Comparator category such as placebo, usual care, or active comparator.",
+          "required": false,
+          "value_type": "controlled_term"
+        },
+        "name": {
+          "definition": "Name of the comparator.",
+          "required": true,
+          "value_type": "string"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A prespecified definition of an outcome, including role, variable, metric, aggregation method, time point, and assessor.",
+      "id": "consort-class-outcome-specification",
+      "kind": "domain_class",
+      "label": "Outcome Specification",
+      "name": "OutcomeSpecification",
+      "parent": "OntologyEntity",
+      "properties": {
+        "aggregation_method": {
+          "definition": "Group-level aggregation method.",
+          "required": true,
+          "value_type": "controlled_term"
+        },
+        "analysis_metric": {
+          "definition": "Participant-level metric such as change from baseline.",
+          "required": true,
+          "value_type": "controlled_term"
+        },
+        "assessor_role": {
+          "definition": "Role responsible for outcome assessment.",
+          "required": false,
+          "value_type": "TrialRole"
+        },
+        "measurement_variable": {
+          "definition": "Specific variable measured.",
+          "required": true,
+          "value_type": "string"
+        },
+        "outcome_identifier": {
+          "definition": "Stable identifier for the outcome.",
+          "required": true,
+          "value_type": "identifier"
+        },
+        "role": {
+          "definition": "Primary, secondary, or other outcome role.",
+          "required": true,
+          "value_type": "controlled_term"
+        },
+        "time_point": {
+          "definition": "Time point of interest.",
+          "required": true,
+          "value_type": "string"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "An OutcomeSpecification designated as primary in the trial protocol.",
+      "id": "consort-class-primary-outcome",
+      "kind": "domain_class",
+      "label": "Primary Outcome",
+      "name": "PrimaryOutcome",
+      "parent": "OutcomeSpecification",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "An OutcomeSpecification designated as secondary in the trial protocol.",
+      "id": "consort-class-secondary-outcome",
+      "kind": "domain_class",
+      "label": "Secondary Outcome",
+      "name": "SecondaryOutcome",
+      "parent": "OutcomeSpecification",
+      "properties": {},
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "An OutcomeSpecification describing a harm or unintended effect and its assessment method.",
+      "id": "consort-class-harms-outcome",
+      "kind": "domain_class",
+      "label": "Harms Outcome",
+      "name": "HarmsOutcome",
+      "parent": "OutcomeSpecification",
+      "properties": {
+        "severity_system": {
+          "definition": "System used to grade harm severity.",
+          "required": false,
+          "value_type": "string"
+        },
+        "surveillance_type": {
+          "definition": "Systematic or non-systematic harms surveillance.",
+          "required": false,
+          "value_type": "controlled_term"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "The process used to generate and implement a random allocation sequence.",
+      "id": "consort-class-random-allocation-process",
+      "kind": "domain_class",
+      "label": "Random Allocation Process",
+      "name": "RandomAllocationProcess",
+      "parent": "OntologyEntity",
+      "properties": {
+        "restriction_type": {
+          "definition": "Restriction such as blocking, stratification, or minimisation.",
+          "required": false,
+          "value_type": "controlled_term"
+        },
+        "sequence_generation_method": {
+          "definition": "Method used to generate the random allocation sequence.",
+          "required": true,
+          "value_type": "method_description"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "The process used to prevent foreknowledge of upcoming trial-arm assignments before allocation.",
+      "id": "consort-class-allocation-concealment-process",
+      "kind": "domain_class",
+      "label": "Allocation Concealment Process",
+      "name": "AllocationConcealmentProcess",
+      "parent": "OntologyEntity",
+      "properties": {
+        "concealment_mechanism": {
+          "definition": "Mechanism that prevents foreknowledge of assignment.",
+          "required": true,
+          "value_type": "method_description"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "The process used to establish, maintain, evaluate, or break blinding to trial-arm assignment.",
+      "id": "consort-class-blinding-process",
+      "kind": "domain_class",
+      "label": "Blinding Process",
+      "name": "BlindingProcess",
+      "parent": "OntologyEntity",
+      "properties": {
+        "mechanism": {
+          "definition": "Mechanism used to establish blinding.",
+          "required": false,
+          "value_type": "method_description"
+        },
+        "status": {
+          "definition": "Current or reported blinding status.",
+          "required": false,
+          "value_type": "controlled_term"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A defined responsibility performed by a person, group, or organization in trial design, conduct, analysis, or reporting.",
+      "id": "consort-class-trial-role",
+      "kind": "domain_class",
+      "label": "Trial Role",
+      "name": "TrialRole",
+      "parent": "OntologyEntity",
+      "properties": {
+        "actor_label": {
+          "definition": "Human-readable person, group, or organization label.",
+          "required": false,
+          "value_type": "string"
+        },
+        "role_type": {
+          "definition": "Responsibility such as sequence generator, enroler, assessor, analyst, or funder.",
+          "required": true,
+          "value_type": "controlled_term"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A count or status observation about participants at a defined trial-flow stage, optionally with reasons.",
+      "id": "consort-class-participant-flow-observation",
+      "kind": "domain_class",
+      "label": "Participant Flow Observation",
+      "name": "ParticipantFlowObservation",
+      "parent": "OntologyEntity",
+      "properties": {
+        "count": {
+          "definition": "Number of participants observed at the stage.",
+          "required": true,
+          "value_type": "number"
+        },
+        "reason": {
+          "definition": "Reason associated with an exclusion, loss, or discontinuation.",
+          "required": false,
+          "value_type": "string"
+        },
+        "stage": {
+          "definition": "Trial-flow stage such as assessed, randomised, treated, followed up, or analysed.",
+          "required": true,
+          "value_type": "controlled_term"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A result for an OutcomeSpecification from a defined analysis population and time point.",
+      "id": "consort-class-outcome-result",
+      "kind": "domain_class",
+      "label": "Outcome Result",
+      "name": "OutcomeResult",
+      "parent": "OntologyEntity",
+      "properties": {
+        "analysis_population": {
+          "definition": "Definition of participants included in the result.",
+          "required": true,
+          "value_type": "string"
+        },
+        "time_point": {
+          "definition": "Outcome time point represented by the result.",
+          "required": true,
+          "value_type": "string"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "The result observed for a particular TrialArm within an OutcomeResult.",
+      "id": "consort-class-group-result",
+      "kind": "domain_class",
+      "label": "Group Result",
+      "name": "GroupResult",
+      "parent": "OntologyEntity",
+      "properties": {
+        "unit": {
+          "definition": "Unit or scale of the result.",
+          "required": false,
+          "value_type": "string"
+        },
+        "value": {
+          "definition": "Observed or summarized result value.",
+          "required": true,
+          "value_type": "number|string"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A quantitative estimate comparing results between trial arms or otherwise summarizing an intervention effect.",
+      "id": "consort-class-effect-estimate",
+      "kind": "domain_class",
+      "label": "Effect Estimate",
+      "name": "EffectEstimate",
+      "parent": "OntologyEntity",
+      "properties": {
+        "measure_type": {
+          "definition": "Effect measure such as mean difference, risk ratio, or hazard ratio.",
+          "required": true,
+          "value_type": "controlled_term"
+        },
+        "scale": {
+          "definition": "Scale on which the estimate is expressed.",
+          "required": false,
+          "value_type": "string"
+        },
+        "value": {
+          "definition": "Numerical effect estimate.",
+          "required": true,
+          "value_type": "number"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    },
+    {
+      "abstract": false,
+      "definition": "A quantitative expression of uncertainty around an EffectEstimate, such as a confidence or credible interval.",
+      "id": "consort-class-precision-estimate",
+      "kind": "domain_class",
+      "label": "Precision Estimate",
+      "name": "PrecisionEstimate",
+      "parent": "OntologyEntity",
+      "properties": {
+        "interval_type": {
+          "definition": "Confidence interval, credible interval, standard error, or another uncertainty representation.",
+          "required": true,
+          "value_type": "controlled_term"
+        },
+        "level": {
+          "definition": "Coverage level such as 0.95.",
+          "required": false,
+          "value_type": "number"
+        },
+        "lower_bound": {
+          "definition": "Lower interval bound.",
+          "required": false,
+          "value_type": "number"
+        },
+        "upper_bound": {
+          "definition": "Upper interval bound.",
+          "required": false,
+          "value_type": "number"
+        }
+      },
+      "status": "reviewed",
+      "type": "OntologyClass"
+    }
+  ],
+  "schema_version": "1.0"
+}

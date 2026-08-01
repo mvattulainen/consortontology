@@ -1,0 +1,42 @@
+{
+  "$id": "https://example.org/consort/schemas/normative-rule.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "expression": {
+      "minProperties": 1,
+      "type": "object"
+    },
+    "id": {
+      "pattern": "^consort-2025-rule-",
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "rule_kind": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "approved",
+        "deprecated"
+      ]
+    },
+    "type": {
+      "const": "NormativeRule"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "label",
+    "status",
+    "rule_kind",
+    "expression"
+  ],
+  "title": "Normative rule",
+  "type": "object"
+}

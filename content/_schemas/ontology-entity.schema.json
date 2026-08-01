@@ -1,0 +1,70 @@
+{
+  "$id": "https://example.org/consort/schemas/ontology-entity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "pattern": "^consort(?:-[a-z0-9]+)+$",
+      "type": "string"
+    },
+    "label": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "approved",
+        "deprecated"
+      ]
+    },
+    "type": {
+      "enum": [
+        "OntologyEntity",
+        "OntologyClass",
+        "ReportingGuideline",
+        "GuidelineVersion",
+        "ChecklistSection",
+        "ChecklistTopic",
+        "ChecklistItem",
+        "AtomicRequirement",
+        "RequirementGroup",
+        "ApplicabilityCondition",
+        "ScopeDefinition",
+        "NormativeRule",
+        "ControlledTerm",
+        "SourceReference",
+        "SourceLocator",
+        "ExtensionHook",
+        "RandomisedTrial",
+        "TrialDesign",
+        "TrialArm",
+        "Participant",
+        "Intervention",
+        "Comparator",
+        "OutcomeSpecification",
+        "PrimaryOutcome",
+        "SecondaryOutcome",
+        "HarmsOutcome",
+        "RandomAllocationProcess",
+        "AllocationConcealmentProcess",
+        "BlindingProcess",
+        "TrialRole",
+        "ParticipantFlowObservation",
+        "OutcomeResult",
+        "GroupResult",
+        "EffectEstimate",
+        "PrecisionEstimate"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "label",
+    "status"
+  ],
+  "title": "Ontology entity",
+  "type": "object"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "vocabularies": {
+    "condition_kind": {
+      "alternative": "One of several reporting patterns may satisfy the source",
+      "contextual": "Requires an explicit relevance or appropriateness interpretation",
+      "objective": "Determined from a factual condition",
+      "presence_dependent": "Triggered when a procedure or analysis was done",
+      "type_dependent": "Determined by an entity type"
+    },
+    "entity_status": {
+      "approved": "Approved after ontology and CONSORT content review",
+      "deprecated": "Retained for identity but no longer current",
+      "draft": "Not yet reviewed",
+      "reviewed": "Ontology and source mapping reviewed internally"
+    },
+    "logical_operator": {
+      "all_of": "Every member is required",
+      "any_of": "At least one member is required",
+      "at_least": "A minimum count is required",
+      "one_of": "Exactly one member is required",
+      "sequence": "Members form an ordered sequence"
+    },
+    "normative_strength": {
+      "conditional_must": "Required when its applicability condition is satisfied",
+      "explanatory": "Clarification, rationale, or example",
+      "may": "Optional information",
+      "must": "Unconditional minimum reporting requirement",
+      "should": "Recommended but excluded from strict minimum completeness by default"
+    },
+    "scope_type": {
+      "all_declared": "Evaluate over every declared member",
+      "at_least_one": "Evaluate for at least one member",
+      "for_each": "Evaluate for every member of the domain",
+      "single": "Evaluate once"
+    },
+    "source_type": {
+      "expanded_checklist": "Official detailed checklist",
+      "explanation_and_elaboration": "Interpretive companion publication",
+      "guideline_statement": "Published normative statement",
+      "official_website": "Official website"
+    },
+    "value_expectation": {
+      "boolean_statement": "An explicit yes/no or occurred/did-not-occur statement",
+      "citation": "A bibliographic citation",
+      "controlled_term": "A value from an enumerated vocabulary",
+      "date": "A date",
+      "duration": "A duration",
+      "free_text_description": "A narrative description",
+      "identifier": "A stable identifier",
+      "method_description": "A reproducible method description",
+      "number": "A numeric value",
+      "percentage": "A percentage",
+      "person_or_role": "A named person or functional role",
+      "reason": "A reason or justification",
+      "software_name": "The name and, where relevant, version of software",
+      "url": "A resolvable web location"
+    }
+  }
+}

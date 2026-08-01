@@ -1,0 +1,100 @@
+{
+  "$id": "https://example.org/consort/schemas/domain-class.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "definition": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^consort-class-[a-z0-9-]+$",
+      "type": "string"
+    },
+    "kind": {
+      "const": "domain_class"
+    },
+    "label": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "name": {
+      "enum": [
+        "RandomisedTrial",
+        "TrialDesign",
+        "TrialArm",
+        "Participant",
+        "Intervention",
+        "Comparator",
+        "OutcomeSpecification",
+        "PrimaryOutcome",
+        "SecondaryOutcome",
+        "HarmsOutcome",
+        "RandomAllocationProcess",
+        "AllocationConcealmentProcess",
+        "BlindingProcess",
+        "TrialRole",
+        "ParticipantFlowObservation",
+        "OutcomeResult",
+        "GroupResult",
+        "EffectEstimate",
+        "PrecisionEstimate"
+      ]
+    },
+    "parent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "properties": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "definition": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "value_type": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "value_type",
+          "definition",
+          "required"
+        ],
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "approved",
+        "deprecated"
+      ]
+    },
+    "type": {
+      "const": "OntologyClass"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "label",
+    "kind",
+    "status",
+    "parent",
+    "definition",
+    "properties"
+  ],
+  "title": "First-class trial-domain class definition",
+  "type": "object"
+}

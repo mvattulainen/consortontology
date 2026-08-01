@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "citation": "Hopewell S, Chan A-W, Collins GS, et al. BMJ. 2025;389:e081123.",
+      "doi": "10.1136/bmj-2024-081123",
+      "license": "CC-BY-4.0",
+      "source_id": "consort-2025-statement",
+      "source_type": "guideline_statement",
+      "title": "CONSORT 2025 statement: updated guideline for reporting randomised trials",
+      "type": "SourceReference",
+      "url": "https://www.bmj.com/content/389/bmj-2024-081123"
+    },
+    {
+      "citation": "Hopewell S, Chan A-W, Collins GS, et al. CONSORT 2025 expanded checklist. 2025.",
+      "license": "CC-BY-4.0",
+      "source_id": "consort-2025-expanded-checklist",
+      "source_type": "expanded_checklist",
+      "title": "CONSORT 2025 expanded checklist of detailed information to include when reporting a randomised trial",
+      "type": "SourceReference",
+      "url": "https://www.consort-spirit.org/_files/ugd/b5740e_a6856e5e2cf94a1db5a8005853404160.pdf"
+    },
+    {
+      "citation": "Hopewell S, Chan A-W, Collins GS, et al. BMJ. 2025;389:e081124.",
+      "doi": "10.1136/bmj-2024-081124",
+      "license": "See publisher record",
+      "source_id": "consort-2025-explanation-elaboration",
+      "source_type": "explanation_and_elaboration",
+      "title": "CONSORT 2025 explanation and elaboration: updated guideline for reporting randomised trials",
+      "type": "SourceReference",
+      "url": "https://www.bmj.com/content/389/bmj-2024-081124"
+    },
+    {
+      "citation": "SPIRIT–CONSORT Group. CONSORT 2025 resources.",
+      "license": "Website terms apply",
+      "source_id": "consort-spirit-website",
+      "source_type": "official_website",
+      "title": "Official SPIRIT–CONSORT website",
+      "type": "SourceReference",
+      "url": "https://www.consort-spirit.org/"
+    }
+  ]
+}
